@@ -1,0 +1,76 @@
+<HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Mainpage </title>
+		
+		<LINK href= style.css type="text/css" rel="stylesheet"/>
+		<meta http-equiv="content-type"	content="text/html;charset=utf-8"/>
+			
+	</head>
+	
+<body BACKGROUND = "airplane-wallpaper-2.jpg">
+	
+	
+
+<header>DIRECT AIRLINES</header>
+<h1>BOARD A FLIGHT</h1>
+
+<!-- aside box has letter in red as a sample of inline style  -->	
+<aside>
+		<a href="FrontPage.html">
+		<font color = "red">Return to Main Menu  </font></a>
+</aside>
+
+<!-- form to select and display all the passengers that will be boarded onto a given flight a select statement
+	must join to tables for to achieve this-->	
+
+<form  action = "boardFlight.php" method="get" >
+		<font-size = 20px>
+		<font-family= "Arial Black", Gadget, sans-serif, >
+		<font color = "black">
+	
+		
+		<li>
+			<p>PASSENGER LIST</p>
+		
+			FLIGHT NUMBER: <input type = "number" name = "flightNumber"  required>
+			
+			DEPARTURE DATE : <input type="date" name="flightDate"   required>
+	
+	
+	
+			<input type="submit" value="GENERATE PASSENGER LIST" />	
+	
+		</li>
+
+</form>
+
+<!-- forms to display print boarding passes and generate receipts are not in use   -->	
+<form   >
+		
+
+		<li>
+			PRINT BOARDING PASS
+			<input type="submit" value="PRINT BOARDING PASS" />	
+		</li>
+
+</form>
+
+<form>
+		<li>
+			PRINT RECEIPTS
+			<input type="submit" value="PRINT RECEIPTS" />
+			
+		</li>
+		
+
+</form>
+
+
+<footer> DIRECT AIRLINES</footer>
+
+</body>
+</html>
+

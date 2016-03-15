@@ -1,0 +1,105 @@
+<HTML>
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<title> Mainpage </title>
+		<LINK href= style.css type="text/css" rel="stylesheet"/>
+		
+		<meta http-equiv="content-type"	content="text/html;charset=utf-8"/>
+		
+<!-- script used for javascript validation  -->		
+		<script>
+  function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+
+}
+	</script>
+		
+	</head>
+	
+<header>DIRECT AIRLINES</header>
+
+	
+<BODY BACKGROUND = "airplane-wallpaper-2.jpg" >
+
+<h1> Add New Passenger Details </h1>
+
+<aside>
+		<a href="FrontPage.html">
+		<font color = "white">Return to Main Menu  </font></a>
+</aside>
+
+
+
+<div class="mainsection">
+	<!-- form to accept input data from the user, data is validated by a combination of html and javascript
+			and if there are no errors, the database is updated -->	
+			
+	<form  name = "myForm" action = "addPassenger.php"  method="post" >
+	  
+	<table border="1" style="width:50%">
+		<tr>
+			<td>FIRST NAME </td>
+			<td><input type="text" name="firstName" maxlength = "25"required></td>
+		</tr>
+		<tr>
+			<td>SURNAME 	</td>
+			<td><input type="text" name="surName" maxlength = "25" required></td>
+		</tr>
+		<tr>
+			<td>ADDRESS1	</td>
+			<td><input type="text" name="address1" maxlength = "40" required></td>
+		</tr>
+		<tr>
+			<td>ADDRESS2    </td>
+			<td><input type="text" name="address2" maxlength = "40"></td>
+		</tr>
+		<tr>
+			<td>CITY        </td>
+			<td><input type="text" name="city" maxlength = "30" required></td>
+		</tr>
+		<tr>
+			<td>COUNTRY     </td>  
+			<td><input type="text" name="country" maxlength = "30" required></td>
+		</tr>
+		<tr>
+			<td>POSTCODE     </td> 
+			<td><input type="text" name="postCode" maxlength = "10"></td>
+		</tr>
+			
+		<tr>
+					<td>E-MAIL ADDRESS </td>		
+			<td><input type="text"  id="Email" size = 18 name="emailcheck" onblur="validateEmail(this);" > </td>
+		</tr>
+<!-- code references from http://codeproject.com/
+		-->
+		<tr>
+			<td>PHONE        </td> 
+			<td><input type="tel" name="phoneNumber"   maxlength='10'
+			onkeypress="return event.charCode >= 48 && event.charCode <= 57" required/> </td>
+<!-- code references from http://stackoverflow.com/
+		-->
+		</tr>
+	
+	</table>
+		
+		<input type="submit" value="ADD PASSENGER"  />
+	</form>
+
+
+
+
+<footer> DIRECT AIRLINES</footer>
+
+ </body>
+ </html>
